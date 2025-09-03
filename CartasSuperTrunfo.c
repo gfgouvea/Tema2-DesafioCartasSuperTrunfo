@@ -29,9 +29,7 @@ int main() {
     printf("Número de pontos turísticos: ");                                         //informa qual dado deverá ser informado pelo usuário.
     scanf("%d", &tur1);                                                              //lê o dado digitado no teclado e armazena na variavel correspondente.
     
-    system("cls");                                                                   //limpa a tela antes de iniciar a coleta de dados da segunda carta.
-
-    printf("Dados da carta 1 armazenados com sucesso!\n");                           //informa ao usuário que os dados da primeira carta foram armazenados corretamente. 
+    printf("Dados da carta 1 armazenados com sucesso!\n\n\n");                           //informa ao usuário que os dados da primeira carta foram armazenados corretamente. 
     printf("Digite os dados da Carta 2\n\n");                                        //informa que começará a coletar os dados da segunda carta.
     
     printf("Estado: ");                                                              //informa qual dado deverá ser informado pelo usuário.
@@ -54,8 +52,6 @@ int main() {
 
     printf("Número de pontos turísticos: ");                                        //informa qual dado deverá ser informado pelo usuário.
     scanf("%d", &tur2);                                                             //lê o dado digitado no teclado e armazena na variavel correspondente.
-    
-    system("cls");                                                                  //limpa a tela para exibir os dados organizados das duas cartas  //limpa a tela antes de exibir os dados completos das cartas.
     
     printf("Os dados da carta 1 são os seguintes:\n\n");                            //Exibição dos dados da carta 1.
     printf("Estado: %s\n", estado1);
