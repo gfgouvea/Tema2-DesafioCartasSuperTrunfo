@@ -1,22 +1,79 @@
 #include <stdio.h>
 
-// Desafio Super Trunfo - Países
-// Tema 1 - Cadastro das Cartas
-// Este código inicial serve como base para o desenvolvimento do sistema de cadastro de cartas de cidades.
-// Siga os comentários para implementar cada parte do desafio.
-//Teste larissa
-
 int main() {
-    // Sugestão: Defina variáveis separadas para cada atributo da cidade.
-    // Exemplos de atributos: código da cidade, nome, população, área, PIB, número de pontos turísticos.
+   
+    char estado1[15], estado2[15], codigo1[5], codigo2[5], cidade1[15], cidade2[15]; //Aqui defino todas as variáveis do tipo char
+    int pop1, pop2, tur1, tur2;                                                      //Aqui defino todas as variáveis do tipo int  
+    float area1, area2, pib1, pib2;                                                  //Aqui defino todas as variáveis do tipo float
+           
+    printf("Digite os dados da Carta 1\n\n");                                        //anuncia para usuário que vai iniciar a leitura dos dados da carta 1
     
-    // Cadastro das Cartas:
-    // Sugestão: Utilize a função scanf para capturar as entradas do usuário para cada atributo.
-    // Solicite ao usuário que insira as informações de cada cidade, como o código, nome, população, área, etc.
+	printf("Estado: ");                                                              //informa qual dado deverá ser informado pelo usuário.
+    scanf("%s", &estado1);                                                           //lê o dado digitado no teclado e armazena na variavel correspondente.
+
+    printf("Código: ");                                                              //informa qual dado deverá ser informado pelo usuário.
+    scanf("%s", &codigo1);                                                           //lê o dado digitado no teclado e armazena na variavel correspondente.
+        
+    printf("Nome da Cidade: ");                                                      //informa qual dado deverá ser informado pelo usuário.
+    scanf("%s", &cidade1);                                                           //lê o dado digitado no teclado e armazena na variavel correspondente.
+
+    printf("População: ");                                                           //informa qual dado deverá ser informado pelo usuário.
+    scanf("%d", &pop1);                                                              //lê o dado digitado no teclado e armazena na variavel correspondente.
     
-    // Exibição dos Dados das Cartas:
-    // Sugestão: Utilize a função printf para exibir as informações das cartas cadastradas de forma clara e organizada.
-    // Exiba os valores inseridos para cada atributo da cidade, um por linha.
+    printf("Área em Km²: ");                                                         //informa qual dado deverá ser informado pelo usuário.
+    scanf("%f", &area1);                                                             //lê o dado digitado no teclado e armazena na variavel correspondente.
+
+    printf("PIB em Bilhoes de R$: ");                                                //informa qual dado deverá ser informado pelo usuário.
+    scanf("%f", &pib1);                                                              //lê o dado digitado no teclado e armazena na variavel correspondente.
+
+    printf("Número de pontos turísticos: ");                                         //informa qual dado deverá ser informado pelo usuário.
+    scanf("%d", &tur1);                                                              //lê o dado digitado no teclado e armazena na variavel correspondente.
+    
+    system("cls");                                                                   //limpa a tela antes de iniciar a coleta de dados da segunda carta.
+
+    printf("Dados da carta 1 armazenados com sucesso!\n");                           //informa ao usuário que os dados da primeira carta foram armazenados corretamente. 
+    printf("Digite os dados da Carta 2\n\n");                                        //informa que começará a coletar os dados da segunda carta.
+    
+    printf("Estado: ");                                                              //informa qual dado deverá ser informado pelo usuário.
+    scanf("%s", &estado2);                                                           //lê o dado digitado no teclado e armazena na variavel correspondente.
+
+    printf("Código: ");                                                              //informa qual dado deverá ser informado pelo usuário.
+    scanf("%s", &codigo2);                                                           //lê o dado digitado no teclado e armazena na variavel correspondente.
+    
+    printf("Nome da Cidade: ");                                                      //informa qual dado deverá ser informado pelo usuário.
+    scanf("%s", &cidade2);                                                           //lê o dado digitado no teclado e armazena na variavel correspondente.
+
+    printf("População: ");                                                           //informa qual dado deverá ser informado pelo usuário.
+    scanf("%d", &pop2);                                                              //lê o dado digitado no teclado e armazena na variavel correspondente.
+    
+    printf("Área em Km²: ");                                                         //informa qual dado deverá ser informado pelo usuário.
+    scanf("%f", &area2);                                                             //lê o dado digitado no teclado e armazena na variavel correspondente.
+
+    printf("PIB em Bilhoes de R$: ");                                               //informa qual dado deverá ser informado pelo usuário.
+    scanf("%f", &pib2);                                                             //lê o dado digitado no teclado e armazena na variavel correspondente.
+
+    printf("Número de pontos turísticos: ");                                        //informa qual dado deverá ser informado pelo usuário.
+    scanf("%d", &tur2);                                                             //lê o dado digitado no teclado e armazena na variavel correspondente.
+    
+    system("cls");                                                                  //limpa a tela para exibir os dados organizados das duas cartas  //limpa a tela antes de exibir os dados completos das cartas.
+    
+    printf("Os dados da carta 1 são os seguintes:\n\n");                            //Exibição dos dados da carta 1.
+    printf("Estado: %s\n", estado1);
+    printf("Código: %s\n", codigo1);
+    printf("Nome da Cidade: %s\n", cidade1);
+    printf("População: %d\n", pop1);
+    printf("Área: %.2f km²\n", area1);
+    printf("PIB: %.2f bilhões de reais.\n", pib1);
+    printf("Pontos turísticos: %d\n\n", tur1);
+    
+    printf("Os dados da carta 2 são os seguintes:\n\n");                            //Exibição dos dados da carta 1.
+    printf("Estado: %s\n", estado2);
+    printf("Código: %s\n", codigo2);
+    printf("Nome da Cidade: %s\n", cidade2);
+    printf("População: %d\n", pop2);
+    printf("Área: %.2f km²\n", area2);
+    printf("PIB: %.2f bilhões de reais.\n", pib2);
+    printf("Pontos turísticos: %d\n\n", tur2);
 
     return 0;
 }
