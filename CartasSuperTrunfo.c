@@ -1,3 +1,4 @@
+#include <stdio.h>
 int main() {
    
     char estado1[15], estado2[15], codigo1[5], codigo2[5], cidade1[15], cidade2[15]; //Aqui defino todas as variáveis do tipo char
