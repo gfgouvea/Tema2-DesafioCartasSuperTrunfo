@@ -29,9 +29,9 @@ int main() {
     printf("Número de pontos turísticos: ");                                         //informa qual dado deverá ser informado pelo usuário.
     scanf("%d", &tur1);                                                              //lê o dado digitado no teclado e armazena na variavel correspondente.
     
-    denpop1 = (float) pop1 / area1;											         //calcula a densidade populacional da cidade da carta 1 e armazena na variável denpop1.
+    denpop1 = (float) pop1 / area1;											         //calcula a densidade populacional da cidade da carta 1 e armazena na variável denpop1. Uso conversão explicita para que o resultado seja float.
     
-    pibpc1 = (float) (pib1 * 1000000000) / pop1;								     //calcula o PIP per capita da carta 1 e armazena na variával pibpc1.
+    pibpc1 = (float) (pib1 * 1000000000) / pop1;								     //calcula o PIP per capita da carta 1 e armazena na variával pibpc1. Uso conversão explicita para que o resultado seja float.
     
     printf("\nDADOS DA CARTA 1 ARMAZENADOS COM SUSSECO!\n\n\n");                     //informa ao usuário que os dados da primeira carta foram armazenados corretamente. 
     printf("Digite os dados da Carta 2\n\n");                                        //informa que começará a coletar os dados da segunda carta.
@@ -57,9 +57,9 @@ int main() {
     printf("Número de pontos turísticos: ");                                        //informa qual dado deverá ser informado pelo usuário.
     scanf("%d", &tur2);                                                             //lê o dado digitado no teclado e armazena na variavel correspondente.
     
-    denpop2 = (float) pop2 / area2; 												//calcula a densidade populacional da cidade da carta 2 e armazena na variável denpop2.
+    denpop2 = (float) pop2 / area2; 												//calcula a densidade populacional da cidade da carta 2 e armazena na variável denpop2. Uso conversão explicita para que o resultado seja float.
     
-    pibpc2 = (float) (pib2 * 1000000000) / pop2;									//calcula o PIP per capita da carta 2 e armazena na variával pibpc2.
+    pibpc2 = (float) (pib2 * 1000000000) / pop2;									//calcula o PIP per capita da carta 2 e armazena na variával pibpc2. Uso conversão explicita para que o resultado seja float.
     
     printf("\nDADOS DA CARTA 2 ARMAZENADOS COM SUSSECO!\n");
     printf("PRONTO PARA JOGAR? AS CARTAS CADASTRADAS SÃO AS SEGUINTES:\n\n\n");
