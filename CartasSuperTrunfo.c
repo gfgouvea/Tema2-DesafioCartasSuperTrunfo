@@ -9,13 +9,13 @@ int main() {
     printf("Digite os dados da Carta 1\n\n");                                        //anuncia para usuário que vai iniciar a leitura dos dados da carta 1
     
 	printf("Estado: ");                                                              //informa qual dado deverá ser informado pelo usuário.
-    scanf("%s", estado1);                                                           //lê o dado digitado no teclado e armazena na variavel correspondente.
+    scanf("%s", estado1);                                                            //lê o dado digitado no teclado e armazena na variavel correspondente.
 
     printf("Código: ");                                                              //informa qual dado deverá ser informado pelo usuário.
-    scanf("%s", codigo1);                                                           //lê o dado digitado no teclado e armazena na variavel correspondente.
+    scanf("%s", codigo1);                                                            //lê o dado digitado no teclado e armazena na variavel correspondente.
         
     printf("Nome da Cidade: ");                                                      //informa qual dado deverá ser informado pelo usuário.
-    scanf("%s", cidade1);                                                           //lê o dado digitado no teclado e armazena na variavel correspondente.
+    scanf("%s", cidade1);                                                            //lê o dado digitado no teclado e armazena na variavel correspondente.
 
     printf("População: ");                                                           //informa qual dado deverá ser informado pelo usuário.
     scanf("%d", &pop1);                                                              //lê o dado digitado no teclado e armazena na variavel correspondente.
@@ -37,13 +37,13 @@ int main() {
     printf("Digite os dados da Carta 2\n\n");                                        //informa que começará a coletar os dados da segunda carta.
     
     printf("Estado: ");                                                              //informa qual dado deverá ser informado pelo usuário.
-    scanf("%s", estado2);                                                           //lê o dado digitado no teclado e armazena na variavel correspondente.
+    scanf("%s", estado2);                                                            //lê o dado digitado no teclado e armazena na variavel correspondente.
 
     printf("Código: ");                                                              //informa qual dado deverá ser informado pelo usuário.
-    scanf("%s", codigo2);                                                           //lê o dado digitado no teclado e armazena na variavel correspondente.
+    scanf("%s", codigo2);                                                            //lê o dado digitado no teclado e armazena na variavel correspondente.
     
     printf("Nome da Cidade: ");                                                      //informa qual dado deverá ser informado pelo usuário.
-    scanf("%s", cidade2);                                                           //lê o dado digitado no teclado e armazena na variavel correspondente.
+    scanf("%s", cidade2);                                                            //lê o dado digitado no teclado e armazena na variavel correspondente.
 
     printf("População: ");                                                           //informa qual dado deverá ser informado pelo usuário.
     scanf("%d", &pop2);                                                              //lê o dado digitado no teclado e armazena na variavel correspondente.
