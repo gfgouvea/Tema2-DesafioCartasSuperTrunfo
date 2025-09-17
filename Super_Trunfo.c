@@ -2,80 +2,80 @@
 
 int main() {
    
-    /*
-    int tur1, tur2, resultado;                                                                     //Aqui defino todas as variáveis do tipo int
+    //Declaração das variáveis. optei por agrupar as variáveis do mesmo tipo na mesma linha para economizar espaço vertical.
+    char estado1[15], estado2[15], codigo1[5], codigo2[5], cidade1[15], cidade2[15];    
+    int tur1, tur2;                                                          
     unsigned long int pop1, pop2;  
-    float area1, area2, pib1, pib2, denpop1, denpop2, pibpc1, pibpc2;   //Aqui defino todas as variáveis do tipo float
-    double super1, super2;
+    float area1, area2, pib1, pib2, denpop1, denpop2, pibpc1, pibpc2, super1, super2;   
     
-    denpop1 = (float) pop1 / area1;										            //calcula a densidade populacional da cidade da carta 1 e armazena na variável denpop1. Uso conversão explicita para que o resultado seja float.
-    printf("densidade: %f\n", denpop1);
-    super1 = 1.0 / denpop1;
-    printf("Densidade inversa: %f\n", super1);
-    */
-
-    char estado1[15], estado2[15], codigo1[5], codigo2[5], cidade1[15], cidade2[15];    //Aqui defino todas as variáveis do tipo char
-    int tur1, tur2;                                                          //Aqui defino todas as variáveis do tipo int
-    unsigned long int pop1, pop2;  
-    float area1, area2, pib1, pib2, denpop1, denpop2, pibpc1, pibpc2;                   //Aqui defino todas as variáveis do tipo float
-    double super1, super2;                                                              //declarei as variáveis de super poder como double pois quando as coloco como float e o resultado do pib per capita fica na casa dos bilhões o programa falha em mostrar o valor correto do super poder.
-           
-    printf("Digite os dados da Carta 1\n\n");                                           //anuncia para usuário que vai iniciar a leitura dos dados da carta 1
+    //Aqui inicio com uma orientação para o usuário para que começe a digitar os dados da primeira carta.
+    printf("Digite os dados da Carta 1\n\n");
     
-	printf("Estado: ");                                                                 //informa qual dado deverá ser informado pelo usuário.
-    scanf("%s", estado1);                                                               //lê o dado digitado no teclado e armazena na variavel correspondente.
+    //a partir de agora cada printf anuncia qual dado da primeira carta deverá ser inserido pelo usuário
+	printf("Estado: ");
+    scanf("%s", estado1);                                                               
 
-    printf("Código: ");                                                                 //informa qual dado deverá ser informado pelo usuário.
-    scanf("%s", codigo1);                                                               //lê o dado digitado no teclado e armazena na variavel correspondente.
+    printf("Código: ");
+    scanf("%s", codigo1);
         
-    printf("Nome da Cidade: ");                                                         //informa qual dado deverá ser informado pelo usuário.
-    scanf("%s", cidade1);                                                               //lê o dado digitado no teclado e armazena na variavel correspondente.
+    printf("Nome da Cidade: ");
+    scanf("%s", cidade1);
 
-    printf("População: ");                                                              //informa qual dado deverá ser informado pelo usuário.
-    scanf("%ld", &pop1);                                                                //lê o dado digitado no teclado e armazena na variavel correspondente.
+    printf("População: ");
+    scanf("%ld", &pop1);
     
-    printf("Área em Km²: ");                                                            //informa qual dado deverá ser informado pelo usuário.
-    scanf("%f", &area1);                                                                //lê o dado digitado no teclado e armazena na variavel correspondente.
+    printf("Área em Km²: ");
+    scanf("%f", &area1);
 
-    printf("PIB em Bilhoes de R$: ");                                                   //informa qual dado deverá ser informado pelo usuário.
-    scanf("%f", &pib1);                                                                 //lê o dado digitado no teclado e armazena na variavel correspondente.
+    printf("PIB em Bilhoes de R$: ");
+    scanf("%f", &pib1);
 
-    printf("Número de pontos turísticos: ");                                            //informa qual dado deverá ser informado pelo usuário.
-    scanf("%d", &tur1);                                                                 //lê o dado digitado no teclado e armazena na variavel correspondente.
+    printf("Número de pontos turísticos: ");
+    scanf("%d", &tur1);
     
-    denpop1 = (float) pop1 / area1;											            //calcula a densidade populacional da cidade da carta 1 e armazena na variável denpop1. Uso conversão explicita para que o resultado seja float.    
-    pibpc1 = (float) (pib1 * 1000000000) / pop1;								        //calcula o PIP per capita da carta 1 e armazena na variával pibpc1. Uso conversão explicita para que o resultado seja float.
-    super1 = (double) pop1 + area1 + (pib1 * 1000000000) + tur1 + (1 / denpop1) + pibpc1;                 //calcula o supperpoder da carta 1 fazendo a conversão explicita para float
-    
-    printf("\nDADOS DA CARTA 1 ARMAZENADOS COM SUSSECO!\n\n\n");                        //informa ao usuário que os dados da primeira carta foram armazenados corretamente. 
-    printf("Digite os dados da Carta 2\n\n");                                           //informa que começará a coletar os dados da segunda carta.
-    
-    printf("Estado: ");                                                                 //informa qual dado deverá ser informado pelo usuário.
-    scanf("%s", estado2);                                                               //lê o dado digitado no teclado e armazena na variavel correspondente.
+    //nesse ponto, com todos os dados da primeira carta inseridos e armazenados inicio a geração dos atributos calculados. primeiro a densidade populacional (denpop1), depois o PIP per capita (pibpc1) e por fim o superpoder (super1). Usei conversões explicitas para garantir que o resultado seja do tipo esperado.
+    denpop1 = (float) pop1 / area1;
 
-    printf("Código: ");                                                                 //informa qual dado deverá ser informado pelo usuário.
-    scanf("%s", codigo2);                                                               //lê o dado digitado no teclado e armazena na variavel correspondente.
-    
-    printf("Nome da Cidade: ");                                                         //informa qual dado deverá ser informado pelo usuário.
-    scanf("%s", cidade2);                                                               //lê o dado digitado no teclado e armazena na variavel correspondente.
+    //optei por converter o PIB de bilhões de reais para escala unitária para fazer o calculo do pib per capita devido a exibição mais amigável ao usuário.
+    pibpc1 = (float) (pib1 * 1000000000) / pop1;
 
-    printf("População: ");                                                              //informa qual dado deverá ser informado pelo usuário.
-    scanf("%ld", &pop2);                                                                //lê o dado digitado no teclado e armazena na variavel correspondente.
-    
-    printf("Área em Km²: ");                                                            //informa qual dado deverá ser informado pelo usuário.
-    scanf("%f", &area2);                                                                //lê o dado digitado no teclado e armazena na variavel correspondente.
+    //no superpoder optei por deixar o pib na escala unitária para enfatisar o fato de ser um superpoder.
+    super1 = (double) pop1 + area1 + (pib1 * 1000000000) + tur1 + (1 / denpop1) + pibpc1;
 
-    printf("PIB em Bilhoes de R$: ");                                                   //informa qual dado deverá ser informado pelo usuário.
-    scanf("%f", &pib2);                                                                 //lê o dado digitado no teclado e armazena na variavel correspondente.
+    //coloco essa mensagem anunciando que os dados da primeira carta foram armazenados com sucesso para que o usuário fique mais bem orientado de onde está no programa.
+    printf("\nDADOS DA CARTA 1 ARMAZENADOS COM SUSSECO!\n\n\n");
 
-    printf("Número de pontos turísticos: ");                                            //informa qual dado deverá ser informado pelo usuário.
-    scanf("%d", &tur2);                                                                 //lê o dado digitado no teclado e armazena na variavel correspondente.
+    //a partir daqui repetimos, para a segunda carta o processo de coleta de dados e de cálculo de atributos realizado para a primeira carta.
+    printf("Digite os dados da Carta 2\n\n");
     
-    denpop2 = (float) pop2 / area2; 												    //calcula a densidade populacional da cidade da carta 2 e armazena na variável denpop2. Uso conversão explicita para que o resultado seja float.    
-    pibpc2 = (float) (pib2 * 1000000000) / pop2;									    //calcula o PIP per capita da carta 2 e armazena na variával pibpc2. Uso conversão explicita para que o resultado seja float.
-    super2 = (double) pop2 + area2 + (pib2 * 1000000000) + tur2 + (1 / denpop2) + pibpc2;                 //calcula o supperpoder da carta 1 fazendo a conversão explicita para float
+    printf("Estado: ");
+    scanf("%s", estado2);
+
+    printf("Código: ");
+    scanf("%s", codigo2);
+    
+    printf("Nome da Cidade: ");
+    scanf("%s", cidade2);
+
+    printf("População: ");
+    scanf("%ld", &pop2);
+    
+    printf("Área em Km²: ");
+    scanf("%f", &area2);
+
+    printf("PIB em Bilhoes de R$: ");
+    scanf("%f", &pib2);
+
+    printf("Número de pontos turísticos: ");
+    scanf("%d", &tur2);
+    
+    denpop2 = (float) pop2 / area2;
+    pibpc2 = (float) (pib2 * 1000000000) / pop2;
+    super2 = (double) pop2 + area2 + (pib2 * 1000000000) + tur2 + (1 / denpop2) + pibpc2;
     
     printf("\nDADOS DA CARTA 2 ARMAZENADOS COM SUSSECO!\n");
+
+    //aqui exibo os dados consolidados das duas cartas antes de iniciar as comparaçoes
     printf("AS CARTAS CADASTRADAS SÃO AS SEGUINTES:\n\n\n");
     
     printf("Carta 1:\n\n");                            								    //Exibição dos dados da carta 1.
@@ -102,21 +102,27 @@ int main() {
     printf("PIB per capita: R$ %.2f por habitante\n", pibpc2);
     printf("Superpoder: %.2f\n\n", super2);
 
+    printf("------------------------------------------------\n\n");
+
+    //aqui coloco uma chamada para destacar que será exibido o resultado por categoria e logo em seguida exibo se a carta 1 venceu ou não. Cada atributo em uma linha
+    //Observação: devido a limitação dos comandos utilizados, quando os dois valores são iguais o código falha mostrando que a carta 1 não venceu e leva a crer que a carta 2 venceu.
     printf("A CARTA VENCEDORA DE CADA CATEGORIA É A SEGUINTE:\n\n");
 
-    //ATENÇÃO: devido a limitação dos comandos utilizados, quando os dois valores são iguais esse código falha mostrando que a carta 1 não venceu e leva a crer que a carta 2 venceu.
     printf("População: a carta 1 venceu? %d\n", pop1 > pop2);
     printf("Área: a carta 1 venceu? %d\n", area1 > area2);
     printf("PIB: a carta 1 venceu? %d\n", pib1 > pib2);
     printf("Pontos turisticos: a carta 1 venceu? %d\n", tur1 > tur2);
     printf("Densidade Populacional: a carta 1 venceu? %d\n", (1 / denpop1) > (1 / denpop2));
-    printf("PIB par capita: a carta 1 venceu? %d\n", pibpc1 > pibpc2);
-    printf("Superpoder: a carta 1 venceu? %d\n", super1 > super2);
+    printf("PIB per capita: a carta 1 venceu? %d\n", pibpc1 > pibpc2);
+    printf("Superpoder: a carta 1 venceu? %d\n\n", super1 > super2);
+
+    printf("FIM DE JOGO. OBRIGADO POR JOGAR SUPER TRUNFO!!\n\n\n");
     
     
     /*
-    //Bônus: Desenvolvi uma lógica, sem usar condicionais, para informar qual carta venceu cada comparação e o placar final.
-    //ATENÇÃO: consegui mostrar quantas vitórias de cada carte e quantos empates, mas quando os valores são iguais não consegui colocar que houve empate naquele atributo.
+    //Bônus: Desenvolvi uma lógica, sem usar condicionais, para informar qual carta venceu cada comparação e o placar final, mas...
+    //Observação: Quando é empate o código mostra qua a carta 2 venceu. Não consegui contornar essa limitação devido a limitação de comandos. Apesar do placar final contabilizar o empate corretamente.
+    //o ideal seria declarar todas as variáveis no inicio do código, mas como este bloco não faz parte do código original, optei por declarar aqui para que não "polua" o programa com variáveis desnecessárias.
     
     int resultado, vit1, empate;
 
