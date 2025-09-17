@@ -43,7 +43,7 @@ int main() {
     super1 = (double) pop1 + area1 + (pib1 * 1000000000) + tur1 + (1 / denpop1) + pibpc1;
 
     //coloco essa mensagem anunciando que os dados da primeira carta foram armazenados com sucesso para que o usuário fique mais bem orientado de onde está no programa.
-    printf("\nDADOS DA CARTA 1 ARMAZENADOS COM SUSSECO!\n\n\n");
+    printf("\nDADOS DA CARTA 1 ARMAZENADOS COM SUCESSO!\n\n\n");
 
     //a partir daqui repetimos, para a segunda carta o processo de coleta de dados e de cálculo de atributos realizado para a primeira carta.
     printf("Digite os dados da Carta 2\n\n");
@@ -73,7 +73,7 @@ int main() {
     pibpc2 = (float) (pib2 * 1000000000) / pop2;
     super2 = (double) pop2 + area2 + (pib2 * 1000000000) + tur2 + (1 / denpop2) + pibpc2;
     
-    printf("\nDADOS DA CARTA 2 ARMAZENADOS COM SUSSECO!\n");
+    printf("\nDADOS DA CARTA 2 ARMAZENADOS COM SUCESSO!\n");
 
     //aqui exibo os dados consolidados das duas cartas antes de iniciar as comparaçoes
     printf("AS CARTAS CADASTRADAS SÃO AS SEGUINTES:\n\n\n");
